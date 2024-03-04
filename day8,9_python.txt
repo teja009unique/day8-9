@@ -1,0 +1,61 @@
+Q) What is Space Complexity?
+A) The amount of memeory we use for an algorithm is known as Space Complexity.
+
+---------
+
+Q) Time and Space complexities for LIST and SET :
+
+A) Consider an example,
+   nums = [1,2,3,1,5]
+   We need the duplicate value.
+   We can solve it using empty list as well as empty set.
+ 
+   So, considering time and space complexities, what we will use here ??
+
+-->LIST SOLUTION : 
+
+   nums = [1,2,3,1,5]
+   empty = []                                                          Time Complexity
+   for n in nums:                                                            n
+	if n not in empty:                                                   n  therefore n*n
+		empty.append(n)
+	else:
+		print(n)
+
+  The time complexity of this algorithm is O(n^2)
+  The space complexity of this algorithm is O(n), because we have the possibility of storing 'n' elements in worst case (if nothing is duplicate in nums; all are different numbers);
+  But normally we store n-1 elements in empty list if a duplicate is present; nth element will be duplicate.
+
+
+-->SET SOLUTION :
+   empty = set{}                                                      Time Complexity
+   for n in nums:                                                           n
+	if n not in empty:                                                  1   therefore n*1
+		empty.append(n)
+	else:
+		print(n)
+
+   The time complexity of this algorithm is O(n).
+   The space complexity of this algorithm is O(n).
+
+
+
+-->Therefore, we will use SET solution for this scenario.
+
+
+------------------------------------------------------------------
+
+Q) What is the time complexity for searching in a set ? 
+A) O(1)
+
+----------------------
+Q) what is Hashing?
+A) 
+   space = "prime number (larger)" * "ASCII Value(ASCII value of the character/value which we considered)"
+
+   Hashing function will automatically create a variable in the form of KEY and stores it in a container.
+   Everything it will create in constant spaces.
+   Whenever it comes across a repeated number, as the 'value' will be occupied in that particular 'key', then it will say it is repeated.
+
+   The larger prime number will also be converted into binary in actual multiplication.
+   The first line is just for visualization.
